@@ -3,142 +3,220 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AI Voice Cloning</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <title>NovaAI - Next Generation AI Solutions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     * {
       box-sizing: border-box;
-    }
-    body {
       margin: 0;
+      padding: 0;
+    }
+
+    body {
       font-family: 'Inter', sans-serif;
+      line-height: 1.6;
       background-color: #f9fafb;
       color: #1f2937;
     }
+
     header {
-      background-color: #1e3a8a;
+      background-color: #111827;
       color: white;
-      padding: 30px 20px;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #1e3a8a, #2563eb);
+      color: white;
+      padding: 100px 20px;
       text-align: center;
     }
-    header h1 {
-      margin: 0;
+
+    .hero h2 {
       font-size: 2.5rem;
+      margin-bottom: 20px;
     }
-    header p {
+
+    .hero p {
       font-size: 1.1rem;
-      margin-top: 10px;
-      color: #dbeafe;
+      max-width: 600px;
+      margin: 0 auto;
     }
-    .container {
-      max-width: 700px;
-      margin: 40px auto;
-      background-color: white;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+
+    .section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
     }
-    h2 {
-      font-size: 1.75rem;
+
+    .section h3 {
+      font-size: 2rem;
+      margin-bottom: 20px;
       color: #1e3a8a;
-      margin-bottom: 25px;
     }
-    label {
-      display: block;
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 30px;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .testimonial {
+      font-style: italic;
+      background-color: #f3f4f6;
+      padding: 20px;
+      border-left: 5px solid #2563eb;
       margin-top: 20px;
-      margin-bottom: 8px;
-      font-weight: 600;
     }
-    input[type="file"],
-    textarea {
-      width: 100%;
+
+    footer {
+      background-color: #111827;
+      color: #d1d5db;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 60px;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
       padding: 12px;
-      border: 1px solid #d1d5db;
-      border-radius: 8px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
       font-size: 1rem;
     }
-    textarea {
-      resize: vertical;
-      height: 140px;
-    }
-    button {
+
+    .contact-form button {
       background-color: #2563eb;
       color: white;
       border: none;
-      padding: 14px 24px;
-      margin-top: 25px;
+      padding: 14px;
+      border-radius: 6px;
       font-size: 1rem;
-      font-weight: 600;
-      border-radius: 8px;
       cursor: pointer;
-      transition: background-color 0.3s ease;
     }
-    button:hover {
-      background-color: #1d4ed8;
+
+    .contact-form button:hover {
+      background-color: #1e40af;
     }
-    .audio-preview {
-      margin-top: 40px;
-      text-align: center;
-    }
-    audio {
-      width: 100%;
-      margin-top: 15px;
-      border-radius: 8px;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #f1f5f9;
-      font-size: 0.9rem;
-      color: #6b7280;
-      margin-top: 60px;
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        margin-top: 10px;
+      }
+
+      .hero h2 {
+        font-size: 2rem;
+      }
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>AI Voice Cloning</h1>
-    <p>Upload your voice and bring text to life with AI technology</p>
+    <h1>NovaAI</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
-  <div class="container">
-    <h2>Clone Your Voice Instantly</h2>
+  <section class="hero">
+    <h2>Revolutionizing Business with Artificial Intelligence</h2>
+    <p>NovaAI empowers companies to innovate and scale using powerful AI solutions crafted by top engineers and researchers.</p>
+  </section>
 
-    <form id="voiceForm">
-      <label for="voiceSample">Upload Your Voice Sample</label>
-      <input type="file" id="voiceSample" name="voiceSample" accept="audio/*" required>
+  <section class="section" id="about">
+    <h3>About Us</h3>
+    <p>At NovaAI, we are passionate about building the future. Our team combines machine learning, natural language processing, and neural voice synthesis to create intelligent systems that learn and grow with your business.</p>
+  </section>
 
-      <label for="textScript">Enter the Script You Want Spoken</label>
-      <textarea id="textScript" name="textScript" placeholder="Type your script here..." required></textarea>
-
-      <button type="submit">Generate Voice</button>
-    </form>
-
-    <div class="audio-preview" id="previewSection" style="display:none;">
-      <h3>Cloned Voice Output</h3>
-      <audio controls id="voiceOutput">
-        <source src="" type="audio/mp3">
-        Your browser does not support the audio element.
-      </audio>
+  <section class="section" id="services">
+    <h3>Our Services</h3>
+    <div class="grid">
+      <div class="card">
+        <h4>Voice Cloning</h4>
+        <p>Create realistic AI-generated voices that mimic human tone, pitch, and emotion.</p>
+      </div>
+      <div class="card">
+        <h4>Chatbots & Assistants</h4>
+        <p>Custom AI chat solutions for sales, support, and productivity tailored to your needs.</p>
+      </div>
+      <div class="card">
+        <h4>Predictive Analytics</h4>
+        <p>Use machine learning to forecast trends, optimize decisions, and drive growth.</p>
+      </div>
     </div>
-  </div>
+  </section>
+
+  <section class="section" id="testimonials">
+    <h3>What Our Clients Say</h3>
+    <div class="testimonial">
+      "NovaAI transformed the way we handle customer service. Their AI assistant reduced our workload by 70%!" – Sarah M., CTO at FinTechCo
+    </div>
+    <div class="testimonial">
+      "The voice cloning tech is unbelievable. We now offer dynamic content with personalized narration!" – Mike R., Media Director
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <h3>Contact Us</h3>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="5" placeholder="How can we help you?" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
 
   <footer>
-    &copy; 2025 AI Voice Cloning. All rights reserved.
+    &copy; 2025 NovaAI | Empowering Innovation with Artificial Intelligence
   </footer>
-
-  <script>
-    document.getElementById('voiceForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-
-      // Simulated preview functionality
-      const preview = document.getElementById('previewSection');
-      const audio = document.getElementById('voiceOutput');
-      audio.src = "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"; // Replace with generated audio URL
-      preview.style.display = "block";
-    });
-  </script>
 
 </body>
 </html>
