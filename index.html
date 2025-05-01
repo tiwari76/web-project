@@ -4,94 +4,119 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>AI Voice Cloning</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
+    * {
+      box-sizing: border-box;
+    }
     body {
-      font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      background-color: #f4f6f9;
-      color: #333;
+      font-family: 'Inter', sans-serif;
+      background-color: #f9fafb;
+      color: #1f2937;
     }
     header {
-      background-color: #1e293b;
+      background-color: #1e3a8a;
       color: white;
-      padding: 20px 40px;
+      padding: 30px 20px;
       text-align: center;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    header p {
+      font-size: 1.1rem;
+      margin-top: 10px;
+      color: #dbeafe;
     }
     .container {
-      max-width: 800px;
+      max-width: 700px;
       margin: 40px auto;
-      padding: 20px;
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      background-color: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
     }
     h2 {
-      color: #1e293b;
-      margin-bottom: 20px;
+      font-size: 1.75rem;
+      color: #1e3a8a;
+      margin-bottom: 25px;
     }
     label {
       display: block;
-      margin: 15px 0 5px;
-      font-weight: bold;
+      margin-top: 20px;
+      margin-bottom: 8px;
+      font-weight: 600;
     }
     input[type="file"],
     textarea {
       width: 100%;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      box-sizing: border-box;
+      padding: 12px;
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      font-size: 1rem;
     }
     textarea {
       resize: vertical;
-      height: 120px;
+      height: 140px;
     }
     button {
       background-color: #2563eb;
       color: white;
       border: none;
-      padding: 12px 20px;
-      margin-top: 20px;
-      border-radius: 6px;
-      cursor: pointer;
+      padding: 14px 24px;
+      margin-top: 25px;
       font-size: 1rem;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
     }
     button:hover {
       background-color: #1d4ed8;
     }
     .audio-preview {
-      margin-top: 30px;
+      margin-top: 40px;
       text-align: center;
     }
     audio {
       width: 100%;
-      margin-top: 10px;
+      margin-top: 15px;
+      border-radius: 8px;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #f1f5f9;
+      font-size: 0.9rem;
+      color: #6b7280;
+      margin-top: 60px;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>AI Voice Cloning Service</h1>
-    <p>Upload a voice sample and generate speech from your text!</p>
+    <h1>AI Voice Cloning</h1>
+    <p>Upload your voice and bring text to life with AI technology</p>
   </header>
 
   <div class="container">
-    <h2>Generate Your Custom Voice</h2>
+    <h2>Clone Your Voice Instantly</h2>
 
     <form id="voiceForm">
-      <label for="voiceSample">Upload Voice Sample:</label>
+      <label for="voiceSample">Upload Your Voice Sample</label>
       <input type="file" id="voiceSample" name="voiceSample" accept="audio/*" required>
 
-      <label for="textScript">Enter Script to Clone Voice:</label>
-      <textarea id="textScript" name="textScript" placeholder="Type something for your cloned voice to say..." required></textarea>
+      <label for="textScript">Enter the Script You Want Spoken</label>
+      <textarea id="textScript" name="textScript" placeholder="Type your script here..." required></textarea>
 
       <button type="submit">Generate Voice</button>
     </form>
 
     <div class="audio-preview" id="previewSection" style="display:none;">
-      <h3>Cloned Voice Output:</h3>
+      <h3>Cloned Voice Output</h3>
       <audio controls id="voiceOutput">
         <source src="" type="audio/mp3">
         Your browser does not support the audio element.
@@ -99,14 +124,18 @@
     </div>
   </div>
 
+  <footer>
+    &copy; 2025 AI Voice Cloning. All rights reserved.
+  </footer>
+
   <script>
-    // This is a simulated preview trigger.
     document.getElementById('voiceForm').addEventListener('submit', function(e) {
       e.preventDefault();
-      // Simulated response
+
+      // Simulated preview functionality
       const preview = document.getElementById('previewSection');
       const audio = document.getElementById('voiceOutput');
-      audio.src = "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"; // sample mp3
+      audio.src = "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"; // Replace with generated audio URL
       preview.style.display = "block";
     });
   </script>
